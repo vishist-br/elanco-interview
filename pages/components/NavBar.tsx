@@ -1,5 +1,4 @@
 import React from 'react';
-import elanco from '../../public/elanco.svg'
 
 const NavBar: React.FC = () => {
   return (
