@@ -1,5 +1,8 @@
+//Imports
 import React from 'react';
 
+
+// Navbar JSX
 const NavBar: React.FC = () => {
   return (
     <nav className="bg-gray-800">
@@ -7,7 +10,6 @@ const NavBar: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <a href="/" className=" flex text-white text-xl font-bold">
-             <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Flowbite Logo" />
              Elanco
             </a>
           </div>

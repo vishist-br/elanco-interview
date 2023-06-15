@@ -116,7 +116,7 @@ export default function Table() {
         []
     );
     const options: { value: string; label: string }[] = useMemo(() => {
-        return columns.map((key) => ({ value: key.selector, label: key.name })).filter((key) => (key.value !== 'Tags'));
+        return columns.map((key: any) => ({ value: key.selector, label: key.name })).filter((key: any) => (key.value !== 'Tags'));
     }, []);
 
 
