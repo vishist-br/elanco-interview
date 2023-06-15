@@ -2,7 +2,8 @@
 "use client"
 import { useEffect, useState, useMemo } from 'react';
 import { sendRequest } from '../api/ElancoClient';
-import DataTable, { Column } from "react-data-table-component";
+import DataTable from "react-data-table-component";
+
 
 // Interface
 interface TableRow {
@@ -31,7 +32,7 @@ export default function Table() {
     const [filterDate, setFilterDate] = useState<TableRow[]>([]);
     const [data, setData] = useState<TableRow[]>([]);
     const [selectedValue, setSelectedValue] = useState<string>('');
-    const columns: Column<TableRow>[] = useMemo(
+    const columns: any = useMemo(
         () => [
             {
                 name: 'Date',
