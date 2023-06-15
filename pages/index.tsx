@@ -1,8 +1,5 @@
 import Table from './components/Table'
-import NavBar from './layout/Navbar'
-
-
-
+import NavBar from './components/NavBar'
 
 export default function Home() {
   return (
