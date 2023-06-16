@@ -171,7 +171,7 @@ export default function Table() {
     // JSX
     return (
         <div className='border border-black-600 overflow-auto'>
-            <div className="flex items-center">
+            <div className="flex items-center space-x-3">
 
                 <div className="relative w-full lg:max-w-sm">
                     <select value={selectedValue} onChange={handleSelectChange} className="w-full p-2.5 text-gray-500 bg-white border rounded-md shadow-sm outline-none appearance-none focus:border-indigo-600">
@@ -185,13 +185,18 @@ export default function Table() {
                 </div>
                 <input
                     type="text"
-                    className="block w-full px-4 py-2 text-blue-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full px-4 py-2 text-blue-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 disabled:bg-gray-300"
                     placeholder="Filter Column Data"
                     value={searchText}
                     onChange={handleSearch}
+                    disabled={selectedValue == 'Select Column' || selectedValue == ''}
                 />
-                <button onClick={handleFilter} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <button disabled={selectedValue == 'Select Column' || selectedValue == '' || searchText == ''} onClick={handleFilter} className="bg-blue-500 disabled:bg-blue-300 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Search
+                </button>
+                <br />
+                <button onClick={() => { setSearchText(''); setSelectedValue('Select Column'); setData(data) }} className="bg-blue-500 disabled:bg-blue-300 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Reset
                 </button>
             </div>
 
