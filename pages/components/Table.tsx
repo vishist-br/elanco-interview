@@ -195,7 +195,7 @@ export default function Table() {
                     Search
                 </button>
                 <br />
-                <button onClick={() => { setSearchText(''); setSelectedValue('Select Column'); setData(data) }} className="bg-blue-500 disabled:bg-blue-300 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <button onClick={() => { setSearchText(''); setSelectedValue('Select Column'); setFilterDate(data) }} className="bg-blue-500 disabled:bg-blue-300 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Reset
                 </button>
             </div>
